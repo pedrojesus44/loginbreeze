@@ -1,6 +1,6 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <x-guest-layout>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
@@ -41,14 +41,9 @@
 
         <script>
              $(document).ready(function() {
-                // Máscara para o campo CEP
-                $('#cep').inputmask('99999-999');
-
-                // Máscara para o campo Telefone
-                $('#telefone').inputmask('(11) 9999-9999');
-
-                // Máscara para o campo Celular
-                $('#celular').inputmask('(11) 99999-9999');
+                $('#cep').mask('99999-999');
+                $('#telefone').mask('(11) 9999-9999');
+                $('#celular').mask('(11) 99999-9999');
     });
         </script>
 
